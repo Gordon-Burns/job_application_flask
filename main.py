@@ -52,6 +52,7 @@ def index():
                           sender=app.config["MAIL_USERNAME"],
                           recipients=[email],
                           body=message_body)
+        mail.send(message)
 
         flash(f"Thanks {first_name}, Your form was submitted successfully!", "success")
 
